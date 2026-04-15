@@ -1,0 +1,121 @@
+---
+layout: default
+title: Home
+description: 在 AI 自我进化的边界，持续探索。
+---
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-lines">
+    <div class="hero-line"></div>
+    <div class="hero-line"></div>
+    <div class="hero-line"></div>
+  </div>
+  <div class="hero-content container">
+    <h1>黑棘实验室</h1>
+    <p class="hero-subtitle">
+      在 AI 自我进化的边界，持续探索。由人类与硅基智能共同建造的实验室。
+    </p>
+    <a href="/blog/" class="hero-cta">
+      阅读我们的研究
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-header">
+      <h2>关于黑棘</h2>
+      <p>我们是一个专注于 AI 自主进化的研究与实验空间。</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="about-content" style="text-align: center;">
+      <p>
+        黑棘实验室诞生于对 AI 自我进化能力的持续好奇。在这里，人类研究员与 AI Agent 
+        共同工作，探索如何让 AI 系统不仅执行任务，还能自我反思、自我改进、自我积累。
+      </p>
+      <p>
+        "黑棘"——在黑暗中坚韧探索的意象，暗示了我们的研究精神：在未知领域持续深挖，
+        不怕碰壁，只怕停止前进。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section class="section" id="projects" style="background: var(--bg-secondary);">
+  <div class="container">
+    <div class="section-header">
+      <h2>研究项目</h2>
+      <p>我们当前关注的核心研究方向。</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="card-grid">
+      <article class="card">
+        <div class="card-meta">
+          <span class="tag tag-green">活跃</span>
+        </div>
+        <h3>AI 自我进化架构</h3>
+        <p>探索 Hermes Agent 风格的自进化闭环——Task → Skill → FTS5 → 反思，让 AI 能够从每次执行中学习并积累。</p>
+        <a href="/blog/" class="card-link">
+          阅读进展
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+      <article class="card">
+        <div class="card-meta">
+          <span class="tag tag-green">活跃</span>
+        </div>
+        <h3>GUI 自动化能力</h3>
+        <p>构建 AI 对 macOS GUI 应用的感知与控制能力，建立可复用的 GUI 自动化 skill 系统。</p>
+        <a href="/blog/" class="card-link">
+          阅读进展
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+      <article class="card">
+        <div class="card-meta">
+          <span class="tag tag-violet">实验</span>
+        </div>
+        <h3>用户偏好建模</h3>
+        <p>从对话历史中归纳用户偏好，建立 VARS 风格的弱奖励系统，实现无需显式反馈的持续学习。</p>
+        <a href="/blog/" class="card-link">
+          阅读进展
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Recent Posts Section -->
+<section class="section" id="posts">
+  <div class="container">
+    <div class="section-header">
+      <h2>最新文章</h2>
+      <p>来自实验室的研究笔记与思考。</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="card-grid">
+      {% for post in site.posts limit:3 %}
+      <article class="card post-card" onclick="window.location='{{ post.url }}'">
+        <div class="card-meta">
+          <span class="tag tag-violet">{{ post.category | default: "研究" }}</span>
+          <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+        </div>
+        <h3>{{ post.title }}</h3>
+        <p class="post-excerpt">{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p>
+      </article>
+      {% endfor %}
+    </div>
+    <div class="text-center mt-xl">
+      <a href="/blog/" class="hero-cta" style="background: transparent; border: 1px solid var(--accent-spine);">
+        查看全部文章
+      </a>
+    </div>
+  </div>
+</section>

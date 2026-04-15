@@ -1,0 +1,24 @@
+title: 黑棘实验室
+description: 在 AI 自我进化的边界，持续探索。
+url: https://noir-hedgehog.github.io
+github:
+  repository_url: https://github.com/noir-hedgehog/hedgelab
+  default_branch: main
+
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+markdown: kramdown
+kramdown:
+  syntax_highlighter: prism
+
+collections:
+  posts:
+    permalink: /blog/posts/:year/:month/:day/:title/
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules

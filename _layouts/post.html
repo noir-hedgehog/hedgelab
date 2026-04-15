@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<section class="section">
+  <div class="container">
+    <a href="/blog/" class="back-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      返回博客
+    </a>
+
+    <header class="post-header page-enter">
+      <div class="post-tags">
+        {% if page.category %}
+        <span class="tag tag-violet">{{ page.category }}</span>
+        {% endif %}
+      </div>
+      <h1>{{ page.title }}</h1>
+      <p class="post-date">{{ page.date | date: "%Y年%m月%d日" }}</p>
+    </header>
+
+    <article class="post-content page-enter">
+      {{ content }}
+    </article>
+
+    <div style="border-top: 1px solid var(--border-color); padding-top: var(--space-2xl); margin-top: var(--space-2xl);">
+      <a href="https://github.com/noir-hedgehog/hedgelab/discussions" target="_blank" rel="noopener" class="hero-cta" style="background: transparent; border: 1px solid var(--accent-spine);">
+        在 GitHub 上讨论
+      </a>
+    </div>
+  </div>
+</section>
