@@ -1,6 +1,7 @@
 title: 黑棘实验室
 description: 在 AI 自我进化的边界，持续探索。
 url: https://noir-hedgehog.github.io
+baseurl: /hedgelab
 github:
   repository_url: https://github.com/noir-hedgehog/hedgelab
   default_branch: main

@@ -12,7 +12,7 @@ description: 在 AI 自我进化的边界，持续探索。
     <p class="hero-subtitle">
       在 AI 自我进化的边界，持续实验可长期积累的智能系统。
     </p>
-    <a href="/blog/" class="hero-cta">
+    <a href="{{ '/blog/' | relative_url }}" class="hero-cta">
       查看研究日志
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -73,7 +73,7 @@ description: 在 AI 自我进化的边界，持续探索。
         </div>
         <h3>AI 自我进化架构</h3>
         <p>探索 Hermes Agent 风格的自进化闭环——Task → Skill → FTS5 → 反思，让 AI 能够从每次执行中学习并积累。</p>
-        <a href="/blog/" class="card-link">
+        <a href="{{ '/blog/' | relative_url }}" class="card-link">
           阅读进展
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -84,7 +84,7 @@ description: 在 AI 自我进化的边界，持续探索。
         </div>
         <h3>GUI 自动化能力</h3>
         <p>构建 AI 对 macOS GUI 应用的感知与控制能力，建立可复用的 GUI 自动化 skill 系统。</p>
-        <a href="/blog/" class="card-link">
+        <a href="{{ '/blog/' | relative_url }}" class="card-link">
           阅读进展
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -95,7 +95,7 @@ description: 在 AI 自我进化的边界，持续探索。
         </div>
         <h3>用户偏好建模</h3>
         <p>从对话历史中归纳用户偏好，建立 VARS 风格的弱奖励系统，实现无需显式反馈的持续学习。</p>
-        <a href="/blog/" class="card-link">
+        <a href="{{ '/blog/' | relative_url }}" class="card-link">
           阅读进展
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -115,7 +115,7 @@ description: 在 AI 自我进化的边界，持续探索。
     </div>
     <div class="card-grid">
       {% for post in site.posts limit:3 %}
-      <article class="card post-card" onclick="window.location='{{ post.url }}'">
+      <article class="card post-card" onclick="window.location='{{ post.url | relative_url }}'">
         <div class="card-meta">
           <span class="tag tag-violet">{{ post.category | default: "研究" }}</span>
           <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
@@ -126,7 +126,7 @@ description: 在 AI 自我进化的边界，持续探索。
       {% endfor %}
     </div>
     <div class="text-center mt-xl">
-      <a href="/blog/" class="hero-cta hero-cta-ghost">
+      <a href="{{ '/blog/' | relative_url }}" class="hero-cta hero-cta-ghost">
         查看全部文章
       </a>
     </div>

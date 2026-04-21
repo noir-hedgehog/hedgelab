@@ -15,7 +15,7 @@ description: 黑棘实验室的研究笔记与思考。
 
     <div class="card-grid">
       {% for post in site.posts %}
-      <article class="card post-card" onclick="window.location='{{ post.url }}'">
+      <article class="card post-card" onclick="window.location='{{ post.url | relative_url }}'">
         <div class="card-meta">
           <span class="tag tag-violet">{{ post.category | default: "研究" }}</span>
           <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>

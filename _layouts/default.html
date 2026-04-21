@@ -16,7 +16,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
   
   <!-- Main stylesheet -->
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
   <div class="lp-bg" aria-hidden="true">
@@ -27,7 +27,7 @@
   <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-container">
-      <a href="/" class="nav-logo">
+      <a href="{{ '/' | relative_url }}" class="nav-logo">
         <span class="nav-logo-mark" aria-hidden="true"></span>
         黑棘实验室
       </a>
@@ -37,10 +37,10 @@
         <span></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="/" class="{% if page.url == '/' %}active{% endif %}">首页</a></li>
-        <li><a href="/blog/" class="{% if page.url contains '/blog/' %}active{% endif %}">研究日志</a></li>
-        <li><a href="/projects/" class="{% if page.url contains '/projects/' %}active{% endif %}">项目</a></li>
-        <li><a href="/about/" class="{% if page.url == '/about/' %}active{% endif %}">关于</a></li>
+        <li><a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">首页</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}" class="{% if page.url contains '/blog/' %}active{% endif %}">研究日志</a></li>
+        <li><a href="{{ '/projects/' | relative_url }}" class="{% if page.url contains '/projects/' %}active{% endif %}">项目</a></li>
+        <li><a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}active{% endif %}">关于</a></li>
       </ul>
     </div>
   </nav>
@@ -67,6 +67,6 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="/assets/js/main.js"></script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
