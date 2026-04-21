@@ -17,6 +17,8 @@
   
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="icon" type="image/png" href="{{ '/assets/logo.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/logo.png' | relative_url }}">
 </head>
 <body>
   <div class="lp-bg" aria-hidden="true">
@@ -28,7 +30,7 @@
   <nav class="navbar">
     <div class="nav-container">
       <a href="{{ '/' | relative_url }}" class="nav-logo">
-        <span class="nav-logo-mark" aria-hidden="true"></span>
+        <img src="{{ '/assets/logo.png' | relative_url }}" alt="黑棘实验室 logo" class="nav-logo-icon">
         黑棘实验室
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
