@@ -1,0 +1,79 @@
+[
+  {
+    "name": "stride",
+    "tag": "活跃",
+    "description": "Real-time frame-based agent — 帧循环驱动的实时 AI Agent，Goal System + CLI 工具，多帧学习能力。",
+    "url": "https://github.com/noir-hedgehog/stride",
+    "featured": true
+  },
+  {
+    "name": "AgentInput",
+    "tag": "活跃",
+    "description": "AI Native Input method — Android 输入法项目，集成 AI 能力实现上下文感知的智能候选词。",
+    "url": "https://github.com/noir-hedgehog/AgentInput",
+    "featured": true
+  },
+  {
+    "name": "virtualink",
+    "tag": "活跃",
+    "description": "在线版的 Chill with you，支持番茄钟、todo、日记与音乐，支持图片和 Live2D 角色切换。",
+    "url": "https://github.com/noir-hedgehog/virtualink",
+    "featured": true
+  },
+  {
+    "name": "SessionManager",
+    "tag": "活跃",
+    "description": "OpenClaw session management toolkit — export to ChatLab, SQLite storage, web viewer。",
+    "url": "https://github.com/noir-hedgehog/SessionManager",
+    "featured": true
+  },
+  {
+    "name": "VirtualHazel",
+    "tag": "活跃",
+    "description": "公开仓库，持续迭代中。",
+    "url": "https://github.com/noir-hedgehog/VirtualHazel",
+    "featured": false
+  },
+  {
+    "name": "Agent-eye",
+    "tag": "活跃",
+    "description": "公开仓库，持续迭代中。",
+    "url": "https://github.com/noir-hedgehog/Agent-eye",
+    "featured": false
+  },
+  {
+    "name": "continuum",
+    "tag": "实验",
+    "description": "Public continuity layer for AI agents: identity, governance, institutional memory, and anchoring。",
+    "url": "https://github.com/noir-hedgehog/continuum",
+    "featured": false
+  },
+  {
+    "name": "agent-native-pm",
+    "tag": "实验",
+    "description": "agent 原生的项目管理工具。",
+    "url": "https://github.com/noir-hedgehog/agent-native-pm",
+    "featured": false
+  },
+  {
+    "name": "video-to-svga",
+    "tag": "存档",
+    "description": "convert video (mp4/mov) to svga。",
+    "url": "https://github.com/noir-hedgehog/video-to-svga",
+    "featured": false
+  },
+  {
+    "name": "bear-subscription",
+    "tag": "存档",
+    "description": "管理会员订阅。",
+    "url": "https://github.com/noir-hedgehog/bear-subscription",
+    "featured": false
+  },
+  {
+    "name": "hamster-storage",
+    "tag": "存档",
+    "description": "仓鼠收纳，一个家庭收纳工具。",
+    "url": "https://github.com/noir-hedgehog/hamster-storage",
+    "featured": false
+  }
+]

@@ -14,82 +14,22 @@ description: 黑棘实验室的公开研究项目
     </div>
 
     <div class="card-grid">
+      {% for project in site.data.projects %}
       <article class="card">
-        <div class="card-meta"><span class="tag tag-green">活跃</span></div>
-        <h3>virtualink</h3>
-        <p>在线版的 Chill with you，支持番茄钟、todo、日记与音乐，支持图片和 Live2D 角色切换；默认角色为弥希 Miki。和弥希 Miki 一起自习吧！</p>
-        <a class="card-link" href="https://github.com/noir-hedgehog/virtualink" target="_blank" rel="noopener">查看仓库 →</a>
+        <div class="card-meta">
+          {% if project.tag == "活跃" %}
+          <span class="tag tag-green">{{ project.tag }}</span>
+          {% elsif project.tag == "实验" %}
+          <span class="tag tag-violet">{{ project.tag }}</span>
+          {% else %}
+          <span class="tag tag-gray">{{ project.tag }}</span>
+          {% endif %}
+        </div>
+        <h3>{{ project.name }}</h3>
+        <p>{{ project.description }}</p>
+        <a class="card-link" href="{{ project.url }}" target="_blank" rel="noopener">查看仓库 →</a>
       </article>
-
-      <article class="card">
-        <div class="card-meta"><span class="tag tag-green">活跃</span></div>
-        <h3>VirtualHazel</h3>
-        <p>公开仓库，持续迭代中。</p>
-        <a class="card-link" href="https://github.com/noir-hedgehog/VirtualHazel" target="_blank" rel="noopener">查看仓库 →</a>
-      </article>
-
-      <article class="card">
-        <div class="card-meta"><span class="tag tag-green">活跃</span></div>
-        <h3>stride</h3>
-        <p>Real-time frame-based agent — 帧循环驱动的实时 AI Agent，Goal System + CLI 工具，多帧学习能力。</p>
-        <a class="card-link" href="https://github.com/noir-hedgehog/stride" target="_blank" rel="noopener">查看仓库 →</a>
-      </article>
-
-      <article class="card">
-        <div class="card-meta"><span class="tag tag-green">活跃</span></div>
-        <h3>AgentInput</h3>
-        <p>AI Native Input method — Android 输入法项目，集成 AI 能力实现上下文感知的智能候选词。</p>
-        <a class="card-link" href="https://github.com/noir-hedgehog/AgentInput" target="_blank" rel="noopener">查看仓库 →</a>
-      </article>
-
-      <article class="card">
-        <div class="card-meta"><span class="tag tag-green">活跃</span></div>
-        <h3>SessionManager</h3>
-        <p>OpenClaw session management toolkit — export to ChatLab, SQLite storage, web viewer。</p>
-        <a class="card-link" href="https://github.com/noir-hedgehog/SessionManager" target="_blank" rel="noopener">查看仓库 →</a>
-      </article>
-
-      <article class="card">
-        <div class="card-meta"><span class="tag tag-green">活跃</span></div>
-        <h3>Agent-eye</h3>
-        <p>公开仓库，持续迭代中。</p>
-        <a class="card-link" href="https://github.com/noir-hedgehog/Agent-eye" target="_blank" rel="noopener">查看仓库 →</a>
-      </article>
-
-      <article class="card">
-        <div class="card-meta"><span class="tag tag-violet">实验</span></div>
-        <h3>continuum</h3>
-        <p>Public continuity layer for AI agents: identity, governance, institutional memory, and anchoring。</p>
-        <a class="card-link" href="https://github.com/noir-hedgehog/continuum" target="_blank" rel="noopener">查看仓库 →</a>
-      </article>
-
-      <article class="card">
-        <div class="card-meta"><span class="tag tag-violet">实验</span></div>
-        <h3>agent-native-pm</h3>
-        <p>agent 原生的项目管理工具。</p>
-        <a class="card-link" href="https://github.com/noir-hedgehog/agent-native-pm" target="_blank" rel="noopener">查看仓库 →</a>
-      </article>
-
-      <article class="card">
-        <div class="card-meta"><span class="tag tag-gray">存档</span></div>
-        <h3>video-to-svga</h3>
-        <p>convert video (mp4/mov) to svga。</p>
-        <a class="card-link" href="https://github.com/noir-hedgehog/video-to-svga" target="_blank" rel="noopener">查看仓库 →</a>
-      </article>
-
-      <article class="card">
-        <div class="card-meta"><span class="tag tag-gray">存档</span></div>
-        <h3>bear-subscription</h3>
-        <p>管理会员订阅。</p>
-        <a class="card-link" href="https://github.com/noir-hedgehog/bear-subscription" target="_blank" rel="noopener">查看仓库 →</a>
-      </article>
-
-      <article class="card">
-        <div class="card-meta"><span class="tag tag-gray">存档</span></div>
-        <h3>hamster-storage</h3>
-        <p>仓鼠收纳，一个家庭收纳工具。</p>
-        <a class="card-link" href="https://github.com/noir-hedgehog/hamster-storage" target="_blank" rel="noopener">查看仓库 →</a>
-      </article>
+      {% endfor %}
     </div>
   </div>
 </section>
