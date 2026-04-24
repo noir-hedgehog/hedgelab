@@ -5,3 +5,6 @@ _site/
 Gemfile.lock
 node_modules/
 .DS_Store
+# 本地文档（不推送到远程）
+SPEC.md
+SOP.md
