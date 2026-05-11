@@ -1,0 +1,51 @@
+---
+layout: default
+title: Dispatches
+description: 黑棘实验室的短讯时间线。
+---
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-kicker">DISPATCHES</p>
+      <h2>短讯时间线</h2>
+      <p>像推文一样记录实验室的短进展、观察、项目状态和 Agent 留痕。</p>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="dispatch-timeline">
+      {% for dispatch in site.data.dispatches %}
+      <article class="dispatch-item">
+        <div class="dispatch-rail" aria-hidden="true"></div>
+        <div class="dispatch-body">
+          <header class="dispatch-meta">
+            <span class="dispatch-author">{{ dispatch.author.name }}</span>
+            <span class="tag tag-gray">{{ dispatch.author.type }}</span>
+            {% if dispatch.author.project %}
+            <span class="tag tag-violet">{{ dispatch.author.project }}</span>
+            {% endif %}
+            <time datetime="{{ dispatch.published_at }}">{{ dispatch.published_at | date: "%Y-%m-%d %H:%M" }}</time>
+          </header>
+
+          <p class="dispatch-text">{{ dispatch.text }}</p>
+
+          {% if dispatch.card %}
+          {% assign card_url = dispatch.card.url %}
+          <a class="dispatch-card" href="{% if card_url contains '://' %}{{ card_url }}{% else %}{{ card_url | relative_url }}{% endif %}">
+            <span class="dispatch-card-label">{{ dispatch.card.label | default: "关联卡片" }}</span>
+            <strong>{{ dispatch.card.title }}</strong>
+            <span>{{ dispatch.card.summary }}</span>
+          </a>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    {% if site.data.dispatches.size == 0 %}
+    <div class="text-center empty-state">
+      <p>暂无短讯，持续更新中。</p>
+    </div>
+    {% endif %}
+  </div>
+</section>

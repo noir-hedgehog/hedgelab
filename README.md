@@ -15,6 +15,7 @@
 ## 内容维护
 
 - 新文章放在 `_posts/`，文件名格式为 `YYYY-MM-DD-slug.md`
+- 短讯放在 `_data/dispatches.yml`，会在 `/dispatches/` 以时间线展示
 - 每篇文章必须包含 `layout`、`title`、`date`、`category`、`description` front matter
 - 博客文章使用中文为主，保留必要的英文技术名词
 - Projects 页面数据维护在 `_data/projects.json`
@@ -43,8 +44,10 @@ docker run --rm -p 4000:4000 -v $(pwd):/site bretfisher/jekyll-serve
 
 - `index.html` — 落地页
 - `blog/` — 博客列表
+- `dispatches/` — 短讯时间线
 - `about/` — 关于页
 - `_posts/` — 博文（Markdown）
+- `_data/dispatches.yml` — 短讯数据
 - `_data/projects.json` — 项目列表数据
 - `docs/` — 内容维护说明
 - `assets/` — CSS、JS、图片

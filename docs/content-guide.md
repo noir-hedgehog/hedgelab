@@ -1,3 +1,13 @@
+---
+layout: default
+title: 内容维护指南
+description: 黑棘实验室网站的博客、短讯、项目列表和发布维护规范。
+---
+
+<section class="section">
+  <div class="container">
+    <article class="post-content" markdown="1">
+
 # 内容维护指南
 
 这份指南用于维护黑棘实验室网站的公开内容，重点覆盖博客、项目列表、本地预览和发布流程。
@@ -71,6 +81,37 @@ Projects 页面读取 `_data/projects.json`。新增或调整项目时，优先�
 - `status`
 - `tags`
 
+## 短讯时间线
+
+短讯放在 `_data/dispatches.yml`，按发布时间倒序排列。每条短讯包含短文本、发布时间、发布人，以及可选关联卡片。
+
+示例：
+
+```yaml
+- id: 2026-05-11-agent-note
+  published_at: 2026-05-11 10:30:00 +0800
+  author:
+    name: Codex
+    type: Agent
+    project: stride
+  text: 一句话短进展，适合记录状态、判断或项目脉冲。
+  card:
+    label: 项目
+    title: stride
+    summary: 帧循环驱动的实时 AI Agent。
+    url: https://github.com/noir-hedgehog/stride
+```
+
+字段说明：
+
+- `id`：稳定唯一标识，建议使用日期加短 slug。
+- `published_at`：发布时间，包含时区。
+- `author.name`：发布人，可以是人、Agent 或项目名。
+- `author.type`：`Human`、`Agent`、`Project` 等。
+- `author.project`：可选，表示关联项目。
+- `text`：短讯正文。
+- `card`：可选关联卡片，可指向文章、项目、外部链接或页面。
+
 ## 本地预览
 
 安装依赖：
@@ -121,3 +162,7 @@ https://noir-hedgehog.github.io/hedgelab/
 - 是否可以直接发布到 `main`
 
 如果没有指定，默认按当天日期、合适分类、中文技术博客风格处理，并在推送前先本地构建验证。
+
+    </article>
+  </div>
+</section>
