@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Projects
-description: 黑棘实验室的公开研究项目
+description: 黑棘实验室的研究项目
 ---
 
 <section class="section">
@@ -9,27 +9,116 @@ description: 黑棘实验室的公开研究项目
     <div class="section-header">
       <p class="section-kicker">PROJECTS</p>
       <h2>研究项目</h2>
-      <p>我们当前的核心研究方向与公开仓库。</p>
+      <p>我们当前的核心研究方向与实验项目。</p>
       <div class="section-divider"></div>
     </div>
 
     <div class="card-grid">
-      {% for project in site.data.projects %}
+      {% for project in site.data.projects.core_projects %}
       <article class="card">
         <div class="card-meta">
-          {% if project.tag == "活跃" %}
-          <span class="tag tag-green">{{ project.tag }}</span>
-          {% elsif project.tag == "实验" %}
-          <span class="tag tag-violet">{{ project.tag }}</span>
-          {% else %}
-          <span class="tag tag-gray">{{ project.tag }}</span>
-          {% endif %}
+          <span class="tag {{ project.status_class }}">{{ project.status_label }}</span>
         </div>
-        <h3>{{ project.name }}</h3>
+        <h3>{{ project.title }}</h3>
         <p>{{ project.description }}</p>
-        <a class="card-link" href="{{ project.url }}" target="_blank" rel="noopener">查看仓库 →</a>
+        <div class="card-tags">
+          {% for tag in project.tags %}
+          <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        <a class="card-link" href="{{ project.repo_url }}" target="_blank" rel="noopener">了解更多</a>
       </article>
       {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-kicker">GITHUB</p>
+      <h2>公开项目列表</h2>
+      <p>同步自 noir-hedgehog 的公开仓库。</p>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="card-grid">
+      <article class="card">
+        <div class="card-meta"><span class="tag tag-violet">开源</span></div>
+        <h3>session-exporter</h3>
+        <p>Export OpenClaw agent sessions to ChatLab format for AI-powered conversation analysis.</p>
+        <a class="card-link" href="https://github.com/noir-hedgehog/session-exporter" target="_blank" rel="noopener">了解更多</a>
+      </article>
+
+      <article class="card">
+        <div class="card-meta"><span class="tag tag-violet">开源</span></div>
+        <h3>stride</h3>
+        <p>Real-time frame-based agent.</p>
+        <a class="card-link" href="https://github.com/noir-hedgehog/stride" target="_blank" rel="noopener">了解更多</a>
+      </article>
+
+      <article class="card">
+        <div class="card-meta"><span class="tag tag-violet">开源</span></div>
+        <h3>AgentInput</h3>
+        <p>AI Native Input method.</p>
+        <a class="card-link" href="https://github.com/noir-hedgehog/AgentInput" target="_blank" rel="noopener">了解更多</a>
+      </article>
+
+      <article class="card">
+        <div class="card-meta"><span class="tag tag-violet">开源</span></div>
+        <h3>continuum</h3>
+        <p>Public continuity layer for AI agents: identity, governance, institutional memory, and anchoring.</p>
+        <a class="card-link" href="https://github.com/noir-hedgehog/continuum" target="_blank" rel="noopener">了解更多</a>
+      </article>
+
+      <article class="card">
+        <div class="card-meta"><span class="tag tag-violet">开源</span></div>
+        <h3>agent-native-pm</h3>
+        <p>agent 原生的项目管理工具。</p>
+        <a class="card-link" href="https://github.com/noir-hedgehog/agent-native-pm" target="_blank" rel="noopener">了解更多</a>
+      </article>
+
+      <article class="card">
+        <div class="card-meta"><span class="tag tag-violet">开源</span></div>
+        <h3>video-to-svga</h3>
+        <p>convert video (mp4/mov) to svga.</p>
+        <a class="card-link" href="https://github.com/noir-hedgehog/video-to-svga" target="_blank" rel="noopener">了解更多</a>
+      </article>
+
+      <article class="card">
+        <div class="card-meta"><span class="tag tag-violet">开源</span></div>
+        <h3>bear-subscription</h3>
+        <p>管理会员订阅。</p>
+        <a class="card-link" href="https://github.com/noir-hedgehog/bear-subscription" target="_blank" rel="noopener">了解更多</a>
+      </article>
+
+      <article class="card">
+        <div class="card-meta"><span class="tag tag-violet">开源</span></div>
+        <h3>hamster-storage</h3>
+        <p>仓鼠收纳，一个家庭收纳工具。</p>
+        <a class="card-link" href="https://github.com/noir-hedgehog/hamster-storage" target="_blank" rel="noopener">了解更多</a>
+      </article>
+
+      <article class="card">
+        <div class="card-meta"><span class="tag tag-gray">开源</span></div>
+        <h3>virtualink</h3>
+        <p>在线版 Chill with you，支持番茄钟、todo、日记与音乐，支持图片和 Live2D 角色切换。</p>
+        <a class="card-link" href="https://github.com/noir-hedgehog/virtualink" target="_blank" rel="noopener">了解更多</a>
+      </article>
+
+      <article class="card">
+        <div class="card-meta"><span class="tag tag-gray">开源</span></div>
+        <h3>VirtualHazel</h3>
+        <p>公开仓库，持续迭代中。</p>
+        <a class="card-link" href="https://github.com/noir-hedgehog/VirtualHazel" target="_blank" rel="noopener">了解更多</a>
+      </article>
+
+      <article class="card">
+        <div class="card-meta"><span class="tag tag-gray">开源</span></div>
+        <h3>Agent-eye</h3>
+        <p>公开仓库，持续迭代中。</p>
+        <a class="card-link" href="https://github.com/noir-hedgehog/Agent-eye" target="_blank" rel="noopener">了解更多</a>
+      </article>
     </div>
   </div>
 </section>

@@ -1,0 +1,43 @@
+core_projects:
+  - title: Hekate 自我进化系统
+    status_label: 活跃
+    status_class: tag-green
+    description: 为 Hekate 构建自我进化框架，围绕 Task→Skill→FTS5 闭环持续强化可复用能力。
+    tags:
+      - OpenClaw
+      - macOS
+      - Skill System
+    repo_url: https://github.com/noir-hedgehog/hedgelab
+    featured: true
+
+  - title: AgentInput
+    status_label: 活跃
+    status_class: tag-green
+    description: AI Native Input Method，面向移动端输入场景的上下文感知与智能交互实验。
+    tags:
+      - Android
+      - IME
+      - MiniMax
+    repo_url: https://github.com/noir-hedgehog/AgentInput
+    featured: true
+
+  - title: GUI 自动化框架
+    status_label: 实验
+    status_class: tag-violet
+    description: 探索 AI 对 macOS GUI 应用的感知与控制能力，构建可复用的自动化 skill 系统。
+    tags:
+      - macOS
+      - Peekaboo
+      - Automation
+    repo_url: https://github.com/noir-hedgehog/hedgelab
+    featured: true
+
+  - title: the-eyes
+    status_label: 存档
+    status_class: tag-gray
+    description: 屏幕捕捉与流媒体服务，用于 AI Agent 的实时视觉感知，提供截图与 dashboard 能力。
+    tags:
+      - Rust
+      - Screen Capture
+    repo_url: https://github.com/noir-hedgehog/the-eyes
+    featured: false
