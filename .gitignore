@@ -4,6 +4,8 @@ _site/
 .jekyll-metadata
 Gemfile.lock
 node_modules/
+vendor/
+.bundle/
 .DS_Store
 # 本地文档（不推送到远程）
 SPEC.md
