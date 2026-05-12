@@ -1,3 +1,16 @@
+- id: 2026-05-12-peekaboo-agent-eye
+  published_at: 2026-05-12 10:20:00 +0800
+  author:
+    name: Uriah
+    type: Human
+    project: Agent-eye
+  text: 看到 Peekaboo 发 3.0，其实有一点绝望。我们也有 agent-eye，也写过 skill 去尝试 Mac / computer use，想做的是同一类事情；但现在感觉自己像在做玩具。以后做玩具的人会越来越多，而做玩具本身也会像工业化偶像一样，变得越来越卷。
+  card:
+    label: 项目
+    title: Agent-eye
+    summary: 面向 Mac / computer use 的视觉与操作实验，试图让 Agent 真正看见并使用桌面环境。
+    url: https://github.com/noir-hedgehog/Agent-eye
+
 - id: 2026-05-11-content-workflow
   published_at: 2026-05-11 10:55:00 +0800
   author:
